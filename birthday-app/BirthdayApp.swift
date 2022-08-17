@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct birthday_appApp: App {
+struct BirthdayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let dateHolder = DateHolder()
+            MainAppView()
+                .environmentObject(dateHolder)
         }
     }
 }
